@@ -1,0 +1,14 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: $fuente-primary;
+  overflow-x: hidden;
+  min-height: 100vh;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+}

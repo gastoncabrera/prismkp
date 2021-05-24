@@ -1,0 +1,52 @@
+.card__container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  left: -100%;
+  margin: 2rem 0;
+  &__container {
+    background-color: $color-primary;
+  }
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 2rem;
+    text-align: center;
+  }
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  &__info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+  }
+}
+.transition {
+  transform: translate(100%);
+  transition: 0.8s ease;
+}
+//   &:hover {
+//     transform: scale(1.1);
+//     cursor: pointer;
+//   }
+
+//   &__image {
+//     height: 100%;
+//   }
+
+// }
