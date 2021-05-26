@@ -46,11 +46,16 @@
     margin: 0 0.5rem;
   }
 }
-
-.contacto__wasap {
-  position: fixed;
-  z-index: 2;
-  bottom: 0;
-  right: 2%;
-  cursor: pointer;
+@include breakpoint(md) {
+  footer {
+    background-color: $color-tertiary;
+  }
+  .footer {
+    &__container {
+      flex-direction: row;
+    }
+    &__left {
+      margin-left: 2rem;
+    }
+  }
 }

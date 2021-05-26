@@ -12,15 +12,12 @@
   width: 100%;
   position: relative;
   left: -100%;
-  margin: 2rem 0;
+  padding: 1rem 0;
   &__container {
     background-color: $color-primary;
   }
   &__title {
-    font-size: 2rem;
-    font-weight: bold;
-    padding-top: 2rem;
-    text-align: center;
+    @include title;
   }
   & img {
     height: 100%;
@@ -39,6 +36,37 @@
 .transition {
   transform: translate(100%);
   transition: 0.8s ease;
+}
+@include breakpoint(md) {
+  .card {
+    left: 0;
+    margin: 0;
+    & img {
+      height: 20rem;
+      width: 100%;
+    }
+    &__title {
+      padding: 2rem 0;
+    }
+  }
+}
+@include breakpoint(lg) {
+  .card {
+    width: 36rem;
+    margin: 1rem 0.5rem;
+    justify-content: center;
+    height: 20rem;
+    transition: 0.5s ease;
+    &__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &:hover {
+      transform: scale(1.1);
+      z-index: 10;
+    }
+  }
 }
 //   &:hover {
 //     transform: scale(1.1);

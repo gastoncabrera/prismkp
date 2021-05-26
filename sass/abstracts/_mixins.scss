@@ -7,3 +7,10 @@
     }
   }
 }
+@mixin title {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 2rem;
+  text-align: center;
+  background-color: $color-primary;
+}

@@ -1,0 +1,30 @@
+.title {
+  @include title;
+}
+.weddingPhotos__photos img {
+  height: 10rem;
+  width: 100%;
+  object-fit: cover;
+  flex: auto;
+  margin: 1rem 1rem;
+  border-radius: 1rem;
+}
+
+.weddingPhotos__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@include breakpoint(sm) {
+  .weddingPhotos__photos img {
+    height: 15rem;
+    width: 20rem;
+  }
+}
+@include breakpoint(lg) {
+  .weddingPhotos__photos img {
+    height: 20rem;
+    width: 20rem;
+  }
+}
