@@ -5,3 +5,9 @@
   right: 5%;
   cursor: pointer;
 }
+@include breakpoint(md) {
+  .whatsapp {
+    height: 4rem;
+    width: 4rem;
+  }
+}

@@ -5,6 +5,9 @@ let content = document.querySelector("#content");
 burger.addEventListener("click", function () {
   menu.classList.toggle("active");
 });
+menu.addEventListener("click", function () {
+  menu.classList.toggle("active");
+});
 
 // animacion con scroll
 

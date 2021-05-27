@@ -3,7 +3,8 @@
   margin-left: auto;
   max-width: 1200px;
   padding-right: 32px;
-  padding-left: 32px; }
+  padding-left: 32px;
+}
 
 body {
   box-sizing: border-box;
@@ -13,10 +14,12 @@ body {
   font-family: "Pattaya", sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
-  height: 100%; }
+  height: 100%;
+}
 
 * {
-  margin: 0; }
+  margin: 0;
+}
 
 .header {
   position: sticky;
@@ -24,114 +27,155 @@ body {
   z-index: 100;
   width: 100%;
   height: 96px;
-  background-color: #861657; }
-  .header__image {
-    height: 100%;
-    width: 8rem; }
-  .header__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%; }
+  background-color: #861657;
+}
+.header__image {
+  height: 100%;
+  width: 8rem;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
 
 .menu__container {
   background-color: rgba(134, 22, 87, 0.8);
   height: 16rem;
   position: relative;
   right: 100%;
-  transition: 2s ease-in-out; }
+  transition: 2s ease-in-out;
+}
 
 .nav {
-  display: none; }
-  .nav__list {
-    display: flex;
-    height: 100%; }
-  .nav__item {
-    list-style: none; }
-  .nav__link {
-    text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 2rem;
-    align-content: center;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 1rem;
-    position: relative; }
-    .nav__link:before {
-      position: absolute;
-      content: "";
-      display: block;
-      width: 0%;
-      height: 3px;
-      background: black;
-      background-color: #501731;
-      bottom: 0;
-      left: 0;
-      transition: all 1.5s; }
-    .nav__link:hover::before {
-      width: 100%; }
+  display: none;
+}
+.nav__list {
+  display: flex;
+  height: 100%;
+}
+.nav__item {
+  list-style: none;
+}
+.nav__link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 1rem;
+  position: relative;
+}
+.nav__link:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  background: black;
+  background-color: #501731;
+  bottom: 0;
+  left: 0;
+  transition: all 1.5s;
+}
+.nav__link:hover::before {
+  width: 100%;
+}
 
 .menu {
   height: 100%;
-  color: black; }
-  .menu__list {
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 2rem;
-    height: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    user-select: none;
-    list-style: none; }
-  .menu a {
-    color: black; }
+  color: black;
+}
+.menu__list {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  user-select: none;
+  list-style: none;
+}
+.menu a {
+  color: black;
+}
 
 .active {
-  right: 0; }
+  right: 0;
+}
 
 @media screen and (min-width: 768px) {
   .header__menu {
-    display: none; }
+    display: none;
+  }
   .menu__container {
-    display: none; }
+    display: none;
+  }
   .nav {
-    display: block; } }
+    display: block;
+  }
+}
 
 .title {
   font-size: 2rem;
   font-weight: bold;
   padding-top: 2rem;
   text-align: center;
-  background-color: #ddfff7; }
+  background-color: #ddfff7;
+  padding: 2rem 0;
+}
 
-.weddingPhotos__photos img {
-  height: 10rem;
-  width: 100%;
-  object-fit: cover;
-  flex: auto;
-  margin: 1rem 1rem;
-  border-radius: 1rem; }
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+}
 
+.weddingPhotos {
+  background-color: #ddfff7;
+}
 .weddingPhotos__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  padding-bottom: 2rem;
+  display: grid;
+  height: 60rem;
+  gap: 0.5rem;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "img-1 img-1 img-1 img-2"
+    "img-1 img-1 img-1 img-2"
+    "img-5 img-5 img-4 img-3"
+    "img-5 img-5 img-4 img-3";
+}
 
-@media screen and (min-width: 576px) {
-  .weddingPhotos__photos img {
-    height: 15rem;
-    width: 20rem; } }
-
-@media screen and (min-width: 992px) {
-  .weddingPhotos__photos img {
-    height: 20rem;
-    width: 20rem; } }
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-1 {
+  grid-area: img-1;
+}
+.img-2 {
+  grid-area: img-2;
+}
+.img-3 {
+  grid-area: img-3;
+}
+.img-4 {
+  grid-area: img-4;
+}
+.img-5 {
+  grid-area: img-5;
+}
 
 .modal__container {
   position: fixed;
@@ -145,44 +189,60 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.4s ease-in; }
+  transition: transform 0.4s ease-in;
+}
 
 .modal__img {
+  padding: 30rem;
   width: 90%;
   height: 85%;
   display: block;
   object-fit: cover;
   transform: scale(0);
-  transition: transform 0.3s 0.4s; }
+  transition: transform 0.3s 0.4s;
+}
 
 .modal__text {
   position: fixed;
   color: #fff;
   bottom: 10px;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+}
 
 .bi.bi-x {
   position: absolute;
   top: 20px;
   right: 20px;
   color: #fff;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .move {
-  transform: translateX(0); }
+  transform: translateX(0);
+}
 
 .header__remove {
-  display: none; }
+  display: none;
+}
 
 .show {
-  transform: scale(1); }
+  transform: scale(1);
+}
 
 .contacto__wasap {
   position: fixed;
   z-index: 2;
   bottom: 2%;
   right: 5%;
-  cursor: pointer; }
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .whatsapp {
+    height: 4rem;
+    width: 4rem;
+  }
+}
 
 .footer__container {
   background-color: #982d5e;
@@ -191,46 +251,58 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem 0;
-  align-items: center; }
+  align-items: center;
+}
 
 .logotipo {
   font-size: 6rem;
   font-weight: bold;
-  font-family: "Tangerine", sans-serif; }
-  .logotipo__firstPart {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.5);
-    right: 20%; }
-  .logotipo__secondPart {
-    position: absolute;
-    font-size: 4rem;
-    margin: 0;
-    padding: 0;
-    top: 70%;
-    left: 4%; }
+  font-family: "Tangerine", sans-serif;
+}
+.logotipo__firstPart {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.5);
+  right: 20%;
+}
+.logotipo__secondPart {
+  position: absolute;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+  top: 70%;
+  left: 4%;
+}
 
 .ubication {
   font-family: "Pattaya", sans-serif;
   margin-top: 2.5rem;
   font-size: 1rem;
-  color: rgba(221, 255, 247, 0.5); }
+  color: rgba(221, 255, 247, 0.5);
+}
 
 .social {
   font-size: 1.5rem;
   font-weight: bold;
-  text-align: center; }
-  .social__title {
-    margin: 1rem 0 0.5rem 0; }
-  .social__link {
-    text-decoration: none;
-    margin: 0 0.5rem; }
+  text-align: center;
+}
+.social__title {
+  margin: 1rem 0 0.5rem 0;
+}
+.social__link {
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
 
 @media screen and (min-width: 768px) {
   footer {
-    background-color: #982d5e; }
+    background-color: #982d5e;
+  }
   .footer__container {
-    flex-direction: row; }
+    flex-direction: row;
+  }
   .footer__left {
-    margin-left: 2rem; } }
+    margin-left: 2rem;
+  }
+}

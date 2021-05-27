@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/style/casamiento.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Pattaya&family=Tangerine:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Pris Makeup</title>
+    <title>Carnaval</title>
   </head>
   <body>
     <header class="header">
       <div class="header__container container">
         <img
           class="header__image"
-          src="./assets/images/Logo.png"
+          src="../assets/images/Logo.png"
           alt="Logo de Prismakeup"
         />
         <div id="menu-burger" class="header__menu">
@@ -67,71 +67,50 @@
         </nav>
       </div>
     </header>
-    <section class="hero">
-      <img src="./assets/images/hero-img2.jpg" alt="imagen del hero" />
-      <div class="hero__container container">
-        <div class="hero__listwork">
-          <h3>Maquillajes para:</h3>
-          <ol class="listwork__list">
-            <li class="listwork__item"><p>Casamientos y ceremonias</p></li>
-            <li class="listwork__item"><p>15 años</p></li>
-            <li class="listwork__item"><p>Carnaval</p></li>
-            <li class="listwork__item"><p>Shooting</p></li>
-          </ol>
-        </div>
+    <h1 class="title">Quinceaños</h1>
+    <section class="weddingPhotos">
+      <div class="weddingPhotos__container container">
+        <img
+          src="../assets/images/15-años/quinceaños1.jpg"
+          alt="casamiento 1"
+          class="img img-1"
+        />
+        <img
+          src="../assets/images/15-años/quinceaños2.jpg"
+          alt="casamiento 2"
+          class="img img-2"
+        />
+        <img
+          src="../assets/images/15-años/quinceaños3.jpg"
+          alt="casamiento 3"
+          class="img img-3"
+        />
+        <img
+          src="../assets/images/15-años/quinceaños4.jpg"
+          alt="casamiento 4"
+          class="img img-4"
+        />
+        <img
+          src="../assets/images/15-años/quinceaños5.jpg"
+          alt="casamiento 5"
+          class="img img-5"
+        />
       </div>
-    </section>
-    <h2 class="card__title">Makeups</h2>
-    <section id="trabajos">
-      <div class="card__container">
-        <article class="card--casamiento card" id="image">
-          <a href="http://127.0.0.1:5500/pages/casamiento.html">
-            <img
-              class="card__image"
-              src="./assets/images/casamiento.jpg"
-              alt="Fotos de casamiento"
-            />
-            <div class="card__info">
-              <p>Casamientos</p>
-            </div>
-          </a>
-        </article>
-        <article class="card--quinceaños card">
-          <a href="http://127.0.0.1:5500/pages/quincea%C3%B1os.html">
-            <img
-              class="card__image"
-              src="./assets/images/15años.jpg"
-              alt="Foto de 15años"
-            />
-            <div class="card__info">
-              <p>Quinceaños</p>
-            </div>
-          </a>
-        </article>
-        <article class="card--shooting card">
-          <a href="http://127.0.0.1:5500/pages/shooting.html">
-            <img
-              class="card__image"
-              src="./assets/images/eventosocial.jpg"
-              alt="Foto de Shooting"
-            />
-            <div class="card__info">
-              <p>Shooting</p>
-            </div>
-          </a>
-        </article>
-        <article class="card--carnaval card">
-          <a href="http://127.0.0.1:5500/pages/carnaval.html">
-            <img
-              class="card__image"
-              src="./assets/images/carnaval1.jpg"
-              alt="Foto de carnaval"
-            />
-            <div class="card__info">
-              <p>Carnaval</p>
-            </div>
-          </a>
-        </article>
+      <div class="modal__container">
+        <img src="" alt="" class="modal__img" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="2rem"
+          height="2rem"
+          fill="currentColor"
+          class="bi bi-x"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+          />
+        </svg>
+        <p class="modal__text"></p>
       </div>
     </section>
     <footer id="contacto">
@@ -183,7 +162,7 @@
       </section>
     </footer>
     <section class="contacto__wasap">
-      <a href="https://wa.me/+5493794220668">
+      <a href="https://wa.me/+5493794220668" name:wasap>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="2.2rem"
@@ -198,6 +177,7 @@
         </svg>
       </a>
     </section>
-    <script src="index.js"></script>
+    <script src="/script/modal.js"></script>
+    <script src="/index.js"></script>
   </body>
 </html>

@@ -13,4 +13,33 @@
   padding-top: 2rem;
   text-align: center;
   background-color: $color-primary;
+  padding: 2rem 0;
+}
+@mixin weddingPhoto {
+  padding-bottom: 2rem;
+  display: grid;
+  height: 100%;
+  gap: 0.5rem;
+}
+@mixin images {
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    &-1 {
+      grid-area: img-1;
+    }
+    &-2 {
+      grid-area: img-2;
+    }
+    &-3 {
+      grid-area: img-3;
+    }
+    &-4 {
+      grid-area: img-4;
+    }
+    &-5 {
+      grid-area: img-5;
+    }
+  }
 }
